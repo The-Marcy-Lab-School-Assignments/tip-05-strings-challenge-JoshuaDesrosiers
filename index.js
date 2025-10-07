@@ -4,8 +4,8 @@ a new string where the first letter of each word is capitalized.
 */
 const capitalizeWords = (sentence) =>{
 let bin =''
-for(let x=0;x<sentence.length;x++){
-    bin+=x==0?sentence[x].toUpperCase():sentence[x-1]==' '?sentence[x].toUpperCase():sentence[x]
+for(let i=0;i<sentence.length;i++){
+    bin+=i==0?sentence[i].toUpperCase():sentence[i-1]==' '?sentence[i].toUpperCase():sentence[i]
 }
 console.log(bin)
 }
@@ -13,10 +13,10 @@ console.log(bin)
 const capitalizeWords2 = (sentence) =>{
 let bin =''
 let space=-1
-for(let x=0;x<sentence.length;x++){
-    space=sentence[x]==' '?x:space
-    bin+=space==x-1?sentence[x].toUpperCase():
-    sentence[x]
+for(let i=0;i<sentence.length;i++){
+    space=sentence[i]==' '?i:space
+    bin+=space==i-1?sentence[i].toUpperCase():
+    sentence[i]
     
 }
 console.log(bin)
