@@ -10,8 +10,23 @@ for(let x=0;x<sentence.length;x++){
 console.log(bin)
 }
 
+const capitalizeWords2 = (sentence) =>{
+let bin =''
+let space=-1
+for(let x=0;x<sentence.length;x++){
+    space=sentence[x]==' '?x:space
+    bin+=space==x-1?sentence[x].toUpperCase():
+    sentence[x]
+    
+}
+console.log(bin)
+}
+
 capitalizeWords("hello world from javascript");
+capitalizeWords2("hello world from javascript");
+
 // → "Hello World From Javascript"
 
 capitalizeWords("javaScript");
+capitalizeWords2("javaScript");
 // → "JavaScript"
